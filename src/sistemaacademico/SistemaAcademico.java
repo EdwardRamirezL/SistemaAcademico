@@ -36,7 +36,7 @@ public class SistemaAcademico {
                     break;
 
                 case 5:
-                    System.out.println("Eliminar registro estudiante...");
+                    eliminarEstudiante();
                     break;
 
                 case 6:
@@ -140,5 +140,7 @@ public class SistemaAcademico {
         
     }
    
-    
+    public static void eliminarEstudiante(){
+        
+    }
 }
