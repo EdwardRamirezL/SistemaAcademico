@@ -24,11 +24,11 @@ public class SistemaAcademico {
                     break;
 
                 case 2:
-                    System.out.println("Listar estudiantes...");
+                    listarEstudiante();
                     break;
 
                 case 3:
-                    System.out.println("Buscar estudiante por identificacion...");
+                    buscarEstudiante();
                     break;
 
                 case 4:
@@ -125,6 +125,14 @@ public class SistemaAcademico {
     }
     
     public static void registrarEstudiante(){
+        
+    }
+    
+    public static void listarEstudiante(){
+        
+    }
+    
+    public static void buscarEstudiante(){
         
     }
     
