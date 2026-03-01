@@ -53,6 +53,13 @@ public Asignatura(String codigo, String nombre, int creditos, String docente){
         this.docente = docente;
     }
 
+    @Override
+    public String toString() {
+        return "Asignatura{" + "codigo=" + codigo + ", nombre=" + nombre + ", creditos=" + creditos + ", docente=" + docente + '}';
+    }
+    
+    
+
 
 }
 
