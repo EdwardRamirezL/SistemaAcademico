@@ -32,7 +32,7 @@ public class SistemaAcademico {
                     break;
 
                 case 4:
-                    System.out.println("Actualizar registro estudiante...");
+                    actualizarEstudiante();
                     break;
 
                 case 5:
@@ -136,5 +136,9 @@ public class SistemaAcademico {
         
     }
     
+    public static void actualizarEstudiante(){
+        
+    }
    
+    
 }
