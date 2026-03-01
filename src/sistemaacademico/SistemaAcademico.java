@@ -8,15 +8,19 @@ public class SistemaAcademico {
 
     public static void main(String[] args) {
        
-        ArrayList<Object> estudiantes, asignaturas, notas = new ArrayList<>();
+        ArrayList<Object> estudiantes = new ArrayList<>();
+        ArrayList<Object> asignaturas = new ArrayList<>();
+        ArrayList<Object> notas = new ArrayList<>();
         
+        int op;
         
-       int op = mostrarMenu();
        do {
+            op = mostrarMenu();
+            
             switch (op) {
 
                 case 1:
-                    System.out.println("Registrar estudiante...");
+                    registrarEstudiante();
                     break;
 
                 case 2:
@@ -115,8 +119,14 @@ public class SistemaAcademico {
             opcion = sc.nextInt();
             sc.nextLine(); 
             
-        }while((opcion > 0) || (opcion <= 16));
+        }while((opcion < 1) || (opcion > 16));
         
         return opcion;
     }
+    
+    public static void registrarEstudiante(){
+        
+    }
+    
+   
 }
