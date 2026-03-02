@@ -12,17 +12,20 @@ public class Estudiante {
     
     private String codigo;
     private String nombre;
-    private String programa;
+    private String apellido;
+    private int edad;
     private int semestre;
     
     // El constructor xd
-    public Estudiante(String codigo, String nombre, String programa, int semestre) {
+    public Estudiante(String codigo, String nombre, String apellido,int edad, int semestre) {
         this.codigo = codigo;
         this.nombre = nombre;
-        this.programa = programa;
+        this.apellido = apellido;
         this.semestre = semestre;
+        this.edad = edad;
     }
 
+    
     // Getters (☞ﾟヮﾟ)☞
     public String getCodigo() {
         return codigo;
@@ -32,8 +35,12 @@ public class Estudiante {
         return nombre;
     }
 
-    public String getPrograma() {
-        return programa;
+    public String getApellido() {
+        return apellido;
+    }
+    
+    public int getEdad() {
+        return edad;
     }
 
     public int getSemestre() {
@@ -49,13 +56,19 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
-    public void setPrograma(String programa) {
-        this.programa = programa;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+    
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
     public void setSemestre(int semestre) {
         this.semestre = semestre;
     }
+    
+    
     
         // toString
     @Override
@@ -63,7 +76,8 @@ public class Estudiante {
         return "Estudiante{" +
                 "codigo='" + codigo + '\'' +
                 ", nombre='" + nombre + '\'' +
-                ", programa='" + programa + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +'\''+ 
                 ", semestre=" + semestre +
                 '}';
     }
