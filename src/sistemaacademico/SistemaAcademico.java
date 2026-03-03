@@ -388,5 +388,37 @@ public class SistemaAcademico {
     System.out.println("Asignatura registrada correctamente.");
 }
 
+    
+    public static void listarAsignatura() {
+
+    System.out.println("=== Lista de Asignaturas ===");
+
+    if (asignaturas.isEmpty()) {
+        System.out.println("No hay asignaturas registradas.");
+    } else {
+        for (Asignatura asignatura : asignaturas) {
+            System.out.println(asignatura);
+        }
+    }
+}
+
+    
+    public static void buscarAsignatura() {
+
+    System.out.print("Ingrese el codigo de la asignatura: ");
+    String codigo = sc.nextLine();
+
+    for (Asignatura asignatura : asignaturas) {
+
+        if (asignatura.getCodigo().equalsIgnoreCase(codigo)) {
+            System.out.println("Asignatura encontrada:");
+            System.out.println(asignatura);
+            return;
+        }
+    }
+
+    System.out.println("Asignatura no encontrada.");
+}
+
 
 }
