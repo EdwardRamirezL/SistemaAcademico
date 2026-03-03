@@ -41,43 +41,43 @@ public class SistemaAcademico {
                     break;
 
                 case 6:
-                    System.out.println("Registrar asignatura...");
+                    registrarAsignatura();
                     break;
 
                 case 7:
-                    System.out.println("Listar asignaturas...");
+                    listarAsignatura();
                     break;
 
                 case 8:
-                    System.out.println("Buscar asignatura por codigo...");
+                    buscarAsignatura();
                     break;
 
                 case 9:
-                    System.out.println("Actualizar registro asignatura...");
+                    actualizarAsignatura();
                     break;
 
                 case 10:
-                    System.out.println("Eliminar registro asignatura...");
+                    eliminarAsignatura();
                     break;
 
                 case 11:
-                    System.out.println("Registrar nota...");
+                    registrarNota();
                     break;
 
                 case 12:
-                    System.out.println("Listar notas...");
+                    listarNotas();
                     break;
 
                 case 13:
-                    System.out.println("Buscar nota asociada a estudiante...");
+                    buscarNota();
                     break;
 
                 case 14:
-                    System.out.println("Actualizar nota...");
+                    actualizarNota();
                     break;
 
                 case 15:
-                    System.out.println("Eliminar nota...");
+                    eliminarNota();
                     break;
 
                 case 16:
@@ -394,7 +394,6 @@ public class SistemaAcademico {
 
     System.out.println("Asignatura registrada correctamente.");
 }
-
     
     public static void listarAsignatura() {
 
@@ -408,7 +407,6 @@ public class SistemaAcademico {
         }
     }
 }
-
     
     public static void buscarAsignatura() {
 
@@ -470,9 +468,6 @@ public class SistemaAcademico {
 
     System.out.println("Asignatura no encontrada.");
 }
-
-    
-    
 
 
 }
