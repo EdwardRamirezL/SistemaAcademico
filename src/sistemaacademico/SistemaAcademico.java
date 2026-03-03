@@ -363,5 +363,30 @@ public class SistemaAcademico {
 
     System.out.println("Nota no encontrada.");
 }
+    
+    // Metodos de la clase asignatura
+    
+    public static void registrarAsignatura() {
+
+    System.out.println("=== Registrar Asignatura ===");
+
+    System.out.print("Codigo: ");
+    String codigo = sc.nextLine();
+
+    System.out.print("Nombre: ");
+    String nombre = sc.nextLine();
+
+    System.out.print("Creditos: ");
+    int creditos = Integer.parseInt(sc.nextLine());
+
+    System.out.print("Docente: ");
+    String docente = sc.nextLine();
+
+    Asignatura nuevaAsignatura = new Asignatura(codigo, nombre, creditos, docente);
+    asignaturas.add(nuevaAsignatura);
+
+    System.out.println("Asignatura registrada correctamente.");
+}
+
 
 }
