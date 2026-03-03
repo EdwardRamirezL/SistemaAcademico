@@ -270,5 +270,37 @@ public class SistemaAcademico {
 
     System.out.println("Nota registrada correctamente.");
 }
+    
+    public static void listarNotas() {
+
+    System.out.println("\n    LISTA DE NOTAS    ");
+
+    if (notas.isEmpty()) {
+        System.out.println("No hay notas registradas.");
+    } else {
+        for (Nota n : notas) {
+            System.out.println(n);
+        }
+    }
+}
+    
+    public static void buscarNota() {
+
+    System.out.print("Ingrese codigo del estudiante: ");
+    String codigo = sc.nextLine();
+
+    boolean encontrada = false;
+
+    for (Nota n : notas) {
+        if (n.getEstudiante().getCodigo().equalsIgnoreCase(codigo)) {
+            System.out.println(n);
+            encontrada = true;
+        }
+    }
+
+    if (!encontrada) {
+        System.out.println("No se encontraron notas para ese estudiante.");
+    }
+}
 
 }
