@@ -8,6 +8,8 @@ public class SistemaAcademico {
 
     static ArrayList<Estudiante> estudiantes = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
+    static ArrayList<Asignatura> asignaturas = new ArrayList<>();
+    static ArrayList<Nota> notas = new ArrayList<>();
 
     public static void main(String[] args) {
         
@@ -215,5 +217,58 @@ public class SistemaAcademico {
 
         System.out.println("Estudiante no encontrado.");
     }
+    
+    //CRUD de la clase Notas
+    
+    public static void registrarNota() {
+
+    System.out.println("\n    REGISTRAR NOTA    ");
+
+    System.out.print("Codigo del estudiante: ");
+    String codigoEst = sc.nextLine();
+
+    Estudiante estudianteEncontrado = null;
+
+    for (Estudiante e : estudiantes) {
+        if (e.getCodigo().equalsIgnoreCase(codigoEst)) {
+            estudianteEncontrado = e;
+            break;
+        }
+    }
+
+    if (estudianteEncontrado == null) {
+        System.out.println("Estudiante no encontrado.");
+        return;
+    }
+
+    System.out.print("Codigo de la asignatura: ");
+    String codigoAsig = sc.nextLine();
+
+    Asignatura asignaturaEncontrada = null;
+
+    for (Asignatura a : asignaturas) {
+        if (a.getCodigo().equalsIgnoreCase(codigoAsig)) {
+            asignaturaEncontrada = a;
+            break;
+        }
+    }
+
+    if (asignaturaEncontrada == null) {
+        System.out.println("Asignatura no encontrada.");
+        return;
+    }
+
+    System.out.print("Valor de la nota: ");
+    double valor = sc.nextDouble();
+    sc.nextLine();
+
+    System.out.print("Periodo: ");
+    String periodo = sc.nextLine();
+
+    Nota nueva = new Nota(estudianteEncontrado, asignaturaEncontrada, valor, periodo);
+    notas.add(nueva);
+
+    System.out.println("Nota registrada correctamente.");
+}
 
 }
