@@ -364,7 +364,7 @@ public class SistemaAcademico {
     System.out.println("Nota no encontrada.");
 }
     
-    // Metodos de la clase asignatura
+    // Metodos CRUD de la clase asignatura
     
     public static void registrarAsignatura() {
 
@@ -372,6 +372,13 @@ public class SistemaAcademico {
 
     System.out.print("Codigo: ");
     String codigo = sc.nextLine();
+    
+     for (var asignatura : asignaturas) {
+        if (asignatura.getCodigo().equalsIgnoreCase(codigo)) {
+            System.out.println("Ya existe una asignatura con ese codigo.");
+            return; 
+        }
+    }
 
     System.out.print("Nombre: ");
     String nombre = sc.nextLine();
@@ -445,6 +452,27 @@ public class SistemaAcademico {
 
     System.out.println("Asignatura no encontrada.");
 }
+    
+    public static void eliminarAsignatura() {
+
+    System.out.print("Ingrese el codigo de la asignatura a eliminar: ");
+    String codigo = sc.nextLine();
+
+    for (int i = 0; i < asignaturas.size(); i++) {
+
+        if (asignaturas.get(i).getCodigo().equalsIgnoreCase(codigo)) {
+
+            asignaturas.remove(i);
+            System.out.println("Asignatura eliminada correctamente.");
+            return;
+        }
+    }
+
+    System.out.println("Asignatura no encontrada.");
+}
+
+    
+    
 
 
 }
