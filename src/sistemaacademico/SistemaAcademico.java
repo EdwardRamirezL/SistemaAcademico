@@ -302,5 +302,38 @@ public class SistemaAcademico {
         System.out.println("No se encontraron notas para ese estudiante.");
     }
 }
+    
+    public static void actualizarNota() {
+
+    System.out.println("\n    ACTUALIZAR NOTA    ");
+
+    System.out.print("Codigo del estudiante: ");
+    String codigoEst = sc.nextLine();
+
+    System.out.print("Codigo de la asignatura: ");
+    String codigoAsig = sc.nextLine();
+
+    System.out.print("Periodo: ");
+    String periodo = sc.nextLine();
+
+    for (Nota n : notas) {
+
+        if (n.getEstudiante().getCodigo().equalsIgnoreCase(codigoEst) &&
+            n.getAsignatura().getCodigo().equalsIgnoreCase(codigoAsig) &&
+            n.getPeriodo().equalsIgnoreCase(periodo)) {
+
+            System.out.print("Nuevo valor de la nota: ");
+            double nuevoValor = sc.nextDouble();
+            sc.nextLine();
+
+            n.setValor(nuevoValor);
+
+            System.out.println("Nota actualizada correctamente.");
+            return;
+        }
+    }
+
+    System.out.println("Nota no encontrada.");
+}
 
 }
