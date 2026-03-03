@@ -420,5 +420,31 @@ public class SistemaAcademico {
     System.out.println("Asignatura no encontrada.");
 }
 
+    public static void actualizarAsignatura() {
+
+    System.out.print("Ingrese el codigo de la asignatura a actualizar: ");
+    String codigo = sc.nextLine();
+
+    for (Asignatura asignatura : asignaturas) {
+
+        if (asignatura.getCodigo().equalsIgnoreCase(codigo)) {
+
+            System.out.print("Nuevo nombre: ");
+            asignatura.setNombre(sc.nextLine());
+
+            System.out.print("Nuevos creditos: ");
+            asignatura.setCreditos(Integer.parseInt(sc.nextLine()));
+
+            System.out.print("Nuevo docente: ");
+            asignatura.setDocente(sc.nextLine());
+
+            System.out.println("Asignatura actualizada correctamente.");
+            return;
+        }
+    }
+
+    System.out.println("Asignatura no encontrada.");
+}
+
 
 }
