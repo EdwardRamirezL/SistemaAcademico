@@ -335,5 +335,33 @@ public class SistemaAcademico {
 
     System.out.println("Nota no encontrada.");
 }
+    
+    public static void eliminarNota() {
+
+    System.out.println("\n    ELIMINAR NOTA    ");
+
+    System.out.print("Codigo del estudiante: ");
+    String codigoEst = sc.nextLine();
+
+    System.out.print("Codigo de la asignatura: ");
+    String codigoAsig = sc.nextLine();
+
+    System.out.print("Periodo: ");
+    String periodo = sc.nextLine();
+
+    for (Nota n : notas) {
+
+        if (n.getEstudiante().getCodigo().equalsIgnoreCase(codigoEst) &&
+            n.getAsignatura().getCodigo().equalsIgnoreCase(codigoAsig) &&
+            n.getPeriodo().equalsIgnoreCase(periodo)) {
+
+            notas.remove(n);
+            System.out.println("Nota eliminada correctamente.");
+            return;
+        }
+    }
+
+    System.out.println("Nota no encontrada.");
+}
 
 }
